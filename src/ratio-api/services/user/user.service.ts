@@ -17,7 +17,7 @@ export function createUser(req: any, res: any): any {
     admin.auth().createUser({
         email: userData.email,
         emailVerified: false,
-        password: userData.password,
+        password: userData.password, // TODO : Hide PW behind SHA256 from client to server
         displayName: userData.username,
         photoURL: userData.photoURL,
         disabled: false
